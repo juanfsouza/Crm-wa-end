@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Contact {
+  id        String   @id
+  name      String?
+  phone     String   @unique
+  messages  Message[]
+
+  CrmCard CrmCard[]
+}
+
+model Message {
+  id         String   @id
+  content    String
+  senderId   String
+  contactId  String
+  createdAt  DateTime @default(now())
+  contact    Contact  @relation(fields: [contactId], references: [id])
+}
+
+model CrmCard {
+  id        Int      @id @default(autoincrement())
+  title     String
+  status    String
+  contactId String
+  contact   Contact  @relation(fields: [contactId], references: [id])
+}
