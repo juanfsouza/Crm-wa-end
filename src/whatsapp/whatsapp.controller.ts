@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Query } from '@nestjs/common';
+import { Controller, Post, Get, Put, Delete, Query, Param, Body } from '@nestjs/common';
 import { WhatsappService } from './whatsapp.service';
 
 @Controller('whatsapp')
@@ -35,5 +35,34 @@ export class WhatsappController {
     const pageNum = parseInt(page, 10);
     const limitNum = parseInt(limit, 10);
     return await this.whatsappService.getContacts(pageNum, limitNum);
+  }
+
+  @Get('messages/:contactId')
+  async getMessages(
+    @Param('contactId') contactId: string,
+    @Query('limit') limit: string = '50',
+  ) {
+    console.log('Requisição GET /whatsapp/messages/:contactId recebida');
+    const limitNum = parseInt(limit, 10);
+    const messages = await this.whatsappService.getChatMessages(contactId, limitNum);
+    return { messages };
+  }
+
+  @Put('messages/:messageId')
+  async editMessage(
+    @Param('messageId') messageId: string,
+    @Body() body: { to: string; newContent: string },
+  ) {
+    console.log('Requisição PUT /whatsapp/messages/:messageId recebida');
+    return { success: true };
+  }
+
+  @Delete('messages/:messageId')
+  async deleteMessage(
+    @Param('messageId') messageId: string,
+    @Query('to') to: string,
+  ) {
+    console.log('Requisição DELETE /whatsapp/messages/:messageId recebida');
+    return { success: true };
   }
 }

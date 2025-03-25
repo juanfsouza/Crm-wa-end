@@ -1,3 +1,3 @@
-2025/03/23-22:50:30.081 cd10 Reusing MANIFEST C:\Users\juan\Desktop\backend\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
-2025/03/23-22:50:30.082 cd10 Recovering log #7
-2025/03/23-22:50:30.083 cd10 Reusing old log C:\Users\juan\Desktop\backend\.wwebjs_auth\session\Default\Local Storage\leveldb/000007.log 
+2025/03/25-13:31:05.867 2658 Reusing MANIFEST C:\Users\juan\Desktop\backend\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
+2025/03/25-13:31:05.868 2658 Recovering log #14
+2025/03/25-13:31:05.869 2658 Reusing old log C:\Users\juan\Desktop\backend\.wwebjs_auth\session\Default\Local Storage\leveldb/000014.log 

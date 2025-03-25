@@ -1,2 +1,3 @@
-2025/03/23-17:25:04.288 e200 Creating DB C:\Users\juan\Desktop\backend\.wwebjs_auth\session\Default\shared_proto_db since it was missing.
-2025/03/23-17:25:04.295 e200 Reusing MANIFEST C:\Users\juan\Desktop\backend\.wwebjs_auth\session\Default\shared_proto_db/MANIFEST-000001
+2025/03/24-17:25:04.677 d1b0 Reusing MANIFEST C:\Users\juan\Desktop\backend\.wwebjs_auth\session\Default\shared_proto_db/MANIFEST-000001
+2025/03/24-17:25:04.678 d1b0 Recovering log #3
+2025/03/24-17:25:04.678 d1b0 Reusing old log C:\Users\juan\Desktop\backend\.wwebjs_auth\session\Default\shared_proto_db/000003.log 
